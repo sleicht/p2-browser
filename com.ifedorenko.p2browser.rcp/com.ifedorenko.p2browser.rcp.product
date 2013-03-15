@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product 
-      name="P2 Browser" 
-      uid="com.ifedorenko.p2browser.rcp" 
-      id="com.ifedorenko.p2browser.p2browser" 
-      application="com.ifedorenko.p2browser.application" 
-      version="1.0.0.qualifier" 
-      useFeatures="true" 
+<product
+      name="P2 Browser"
+      uid="com.ifedorenko.p2browser.rcp"
+      id="com.ifedorenko.p2browser.p2browser"
+      application="com.ifedorenko.p2browser.application"
+      version="1.0.0.qualifier"
+      useFeatures="true"
       includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
 
    <launcher name="p2browser"/>
- 
+
    <launcherArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
    </launcherArgs>
 
    <features>
       <feature id="com.ifedorenko.p2browser.feature" version="0.0.0"/>
+      <feature id="org.eclipse.emf.ecore"/>
+      <feature id="org.eclipse.e4.rcp"/>
+      <feature id="org.eclipse.equinox.p2.core.feature"/>
+      <feature id="org.eclipse.emf.common"/>
+      <feature id="org.eclipse.rcp"/>
    </features>
 
    <configurations>
