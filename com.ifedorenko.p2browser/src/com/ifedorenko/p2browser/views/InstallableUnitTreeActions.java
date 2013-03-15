@@ -154,6 +154,17 @@ abstract class InstallableUnitTreeActions
         } );
         mntmCopy.setText( "Copy" );
 
+        MenuItem mntmCopyForTarget = new MenuItem( menu, SWT.NONE );
+        mntmCopyForTarget.addSelectionListener( new SelectionAdapter()
+        {
+            @Override
+            public void widgetSelected( SelectionEvent e )
+            {
+                copyForTargetToClipboard();
+            }
+        } );
+        mntmCopyForTarget.setText( "Copy for Targetfile" );
+
         if ( getRepositoryLocations() != null )
         {
             MenuItem mntmSaveAs = new MenuItem( menu, SWT.NONE );
@@ -331,6 +342,7 @@ abstract class InstallableUnitTreeActions
         clipboard.dispose();
     }
 
+
     protected void addToClipboard( List<Transfer> dataTypes, List<Object> data )
     {
         Collection<InstallableUnitNode> selection = getSelectedInstallableUnits();
@@ -348,6 +360,47 @@ abstract class InstallableUnitTreeActions
                 sb.append( node.getInstallableUnit().getId() );
                 sb.append( '\t' );
                 sb.append( node.getInstallableUnit().getVersion().toString() );
+            }
+
+            dataTypes.add( TextTransfer.getInstance() );
+            data.add( sb.toString() );
+        }
+    }
+
+    protected void copyForTargetToClipboard()
+    {
+        List<Transfer> dataTypes = new ArrayList<Transfer>();
+        List<Object> data = new ArrayList<Object>();
+
+        addToClipboardForTarget( dataTypes, data );
+
+        Clipboard clipboard = new Clipboard( getSite().getShell().getDisplay() );
+
+        clipboard.setContents( data.toArray(), dataTypes.toArray( new Transfer[dataTypes.size()] ) );
+
+        clipboard.dispose();
+    }
+
+
+    protected void addToClipboardForTarget( List<Transfer> dataTypes, List<Object> data )
+    {
+        Collection<InstallableUnitNode> selection = getSelectedInstallableUnits();
+
+        if ( selection != null && !selection.isEmpty() )
+        {
+            StringBuilder sb = new StringBuilder();
+
+            for ( InstallableUnitNode node : selection )
+            {
+                if ( sb.length() > 0 )
+                {
+                    sb.append( '\n' );
+                }
+                sb.append("<unit id=\"");
+                sb.append( node.getInstallableUnit().getId() );
+                sb.append( "\" version=\"" );
+                sb.append( node.getInstallableUnit().getVersion().toString() );
+                sb.append("\"/>");
             }
 
             dataTypes.add( TextTransfer.getInstance() );
