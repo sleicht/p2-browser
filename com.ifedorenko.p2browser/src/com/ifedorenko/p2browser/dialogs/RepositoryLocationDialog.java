@@ -42,7 +42,7 @@ public class RepositoryLocationDialog
 
     /**
      * Create the dialog.
-     * 
+     *
      * @param parentShell
      */
     public RepositoryLocationDialog( Shell parentShell )
@@ -93,13 +93,14 @@ public class RepositoryLocationDialog
     public void create()
     {
         super.create();
+        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.luna" );
+        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.kepler" );
+        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.juno" );
+        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.indigo" );
+        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.helios" );
+        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.galileo" );
 
-        combo.add( "http://download.eclipse.org/releases/luna" );
-        combo.add( "http://download.eclipse.org/releases/kepler" );
-        // combo.add( "http://download.eclipse.org/releases/juno" );
-        // combo.add( "http://download.eclipse.org/releases/indigo" );
-        // combo.add( "http://download.eclipse.org/releases/helios" );
-        // combo.add( "http://download.eclipse.org/releases/galileo" );
+        combo.add( "https://scout.bsiag.com/repository/orbit-S20130427215344" );
 
         combo.add( "http://download.eclipse.org/eclipse/updates/4.4milestones" );
         combo.add( "http://download.eclipse.org/eclipse/updates/4.3" );
