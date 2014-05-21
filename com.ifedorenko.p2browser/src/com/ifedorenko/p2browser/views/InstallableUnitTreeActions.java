@@ -342,7 +342,6 @@ abstract class InstallableUnitTreeActions
         clipboard.dispose();
     }
 
-
     protected void addToClipboard( List<Transfer> dataTypes, List<Object> data )
     {
         Collection<InstallableUnitNode> selection = getSelectedInstallableUnits();
