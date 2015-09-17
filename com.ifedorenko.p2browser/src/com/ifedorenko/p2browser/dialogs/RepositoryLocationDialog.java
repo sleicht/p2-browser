@@ -114,8 +114,9 @@ public class RepositoryLocationDialog
 
 //        combo.add( "https://scout.bsiag.com/repository/orbit-S20130427215344" );
 
-//        combo.add( "http://download.eclipse.org/eclipse/updates/4.4milestones" );
-//        combo.add( "http://download.eclipse.org/eclipse/updates/4.3" );
+        combo.add( "http://download.eclipse.org/eclipse/updates/4.5" );
+        combo.add( "http://download.eclipse.org/eclipse/updates/4.4" );
+        // combo.add( "http://download.eclipse.org/eclipse/updates/4.3" );
         // combo.add( "http://download.eclipse.org/eclipse/updates/4.2" );
         // combo.add( "http://download.eclipse.org/eclipse/updates/3.8" );
         // combo.add( "http://download.eclipse.org/eclipse/updates/3.7" );
