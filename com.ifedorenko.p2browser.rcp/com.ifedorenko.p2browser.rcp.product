@@ -13,11 +13,18 @@
    <configIni use="default">
    </configIni>
 
-   <launcher name="p2browser"/>
+   <launcher name="p2browser">
+      <solaris/>
+      <win useIco="false"><bmp/></win>
+   </launcher>
 
    <launcherArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
    </launcherArgs>
+
+   <vm>
+      <macos include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8</macos>
+   </vm>
 
    <features>
       <feature id="com.ifedorenko.p2browser.feature" version="0.0.0"/>

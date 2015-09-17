@@ -93,17 +93,29 @@ public class RepositoryLocationDialog
     public void create()
     {
         super.create();
+//        combo.add( "http://download.eclipse.org/scout/releases/3.10" );
+//        combo.add( "http://archive.eclipse.org/scout/releases/3.10" );
+//        combo.add( "https://scout.bsiag.com/repository/tools-scout-3.10-SR1-RC5-public" );
+//        combo.add( "http://download.eclipse.org/scout/releases/4.0" );
+//        combo.add( "http://archive.eclipse.org/scout/releases/4.0" );
+//        combo.add( "http://download.eclipse.org/scout/releases/5.0" );
+//        combo.add( "http://archive.eclipse.org/scout/releases/5.0" );
+//        combo.add( "http://download.eclipse.org/scout/releases/5.1" );
+//        combo.add( "http://archive.eclipse.org/scout/releases/5.1" );
+
+        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.neon" );
+        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.mars" );
         combo.add( "https://scout.bsiag.com/repository/eclipse.releases.luna" );
-        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.kepler" );
-        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.juno" );
-        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.indigo" );
-        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.helios" );
-        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.galileo" );
+//        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.kepler" );
+//        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.juno" );
+//        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.indigo" );
+//        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.helios" );
+//        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.galileo" );
 
-        combo.add( "https://scout.bsiag.com/repository/orbit-S20130427215344" );
+//        combo.add( "https://scout.bsiag.com/repository/orbit-S20130427215344" );
 
-        combo.add( "http://download.eclipse.org/eclipse/updates/4.4milestones" );
-        combo.add( "http://download.eclipse.org/eclipse/updates/4.3" );
+//        combo.add( "http://download.eclipse.org/eclipse/updates/4.4milestones" );
+//        combo.add( "http://download.eclipse.org/eclipse/updates/4.3" );
         // combo.add( "http://download.eclipse.org/eclipse/updates/4.2" );
         // combo.add( "http://download.eclipse.org/eclipse/updates/3.8" );
         // combo.add( "http://download.eclipse.org/eclipse/updates/3.7" );

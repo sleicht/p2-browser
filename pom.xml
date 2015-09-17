@@ -32,8 +32,18 @@
 
   <repositories>
     <repository>
-      <id>eclipse</id>
+      <id>eclipse_3.8</id>
       <url>http://download.eclipse.org/eclipse/updates/3.8</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>eclipse_juno</id>
+      <url>https://scout.bsiag.com/repository/eclipse.releases.juno</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>orbit</id>
+      <url>https://scout.bsiag.com/repository/orbit-R</url>
       <layout>p2</layout>
     </repository>
   </repositories>
