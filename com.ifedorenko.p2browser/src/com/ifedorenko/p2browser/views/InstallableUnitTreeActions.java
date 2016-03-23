@@ -248,8 +248,7 @@ abstract class InstallableUnitTreeActions
         {
             AbstractInstallableUnitHierarchyView iusView =
                 (AbstractInstallableUnitHierarchyView) activePage.showView( viewId, sb.toString(),
-                                                                            IWorkbenchPage.VIEW_ACTIVATE
-                                                                                | IWorkbenchPage.VIEW_CREATE );
+							IWorkbenchPage.VIEW_ACTIVATE);
 
             iusView.setMetadata( getAllInstallableUnits(), InstallableUnitNode.toInstallableUnits( selection ) );
         }
@@ -305,8 +304,7 @@ abstract class InstallableUnitTreeActions
                 InstallableUnitView iuView =
                     (InstallableUnitView) activePage.showView( InstallableUnitView.ID,
                                                                node.getInstallableUnit().getId(),
-                                                               IWorkbenchPage.VIEW_ACTIVATE
-                                                                   | IWorkbenchPage.VIEW_CREATE );
+								IWorkbenchPage.VIEW_ACTIVATE);
                 iuView.setInstallableUnit( node.getMetadata(), node.getInstallableUnit() );
             }
             catch ( PartInitException e1 )
