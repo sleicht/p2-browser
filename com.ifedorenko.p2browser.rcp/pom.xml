@@ -45,6 +45,14 @@
           </execution>
         </executions>
         <configuration>
+	 <products>
+	    <product>
+	      <id>com.ifedorenko.p2browser.rcp</id>
+	      <rootFolders>
+		<macosx>p2Browser.app</macosx>
+	      </rootFolders>
+	    </product>
+	  </products>
           <formats>
             <linux>tar.gz</linux>
             <macosx>tar.gz</macosx>

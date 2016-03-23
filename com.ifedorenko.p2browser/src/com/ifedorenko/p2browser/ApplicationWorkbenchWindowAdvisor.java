@@ -37,6 +37,7 @@ public class ApplicationWorkbenchWindowAdvisor
         configurer.setInitialSize( new Point( 768, 600 ) );
         configurer.setShowCoolBar( false );
         configurer.setShowStatusLine( true );
+		configurer.setShowProgressIndicator(true);
         configurer.setTitle( "P2 Browser" );
     }
 }
