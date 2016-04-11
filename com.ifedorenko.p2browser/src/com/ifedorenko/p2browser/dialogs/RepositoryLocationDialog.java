@@ -65,7 +65,8 @@ public class RepositoryLocationDialog
         combo = new Combo( container, SWT.NONE );
         combo.addModifyListener( new ModifyListener()
         {
-            public void modifyText( ModifyEvent e )
+            @Override
+			public void modifyText( ModifyEvent e )
             {
                 try
                 {
@@ -102,10 +103,11 @@ public class RepositoryLocationDialog
 //        combo.add( "http://archive.eclipse.org/scout/releases/5.0" );
 //        combo.add( "http://download.eclipse.org/scout/releases/5.1" );
 //        combo.add( "http://archive.eclipse.org/scout/releases/5.1" );
-
+        combo.add( "https://scout.bsiag.com/repository/nebula.snapshot/" );
         combo.add( "https://scout.bsiag.com/repository/eclipse.releases.neon" );
         combo.add( "https://scout.bsiag.com/repository/eclipse.releases.mars" );
         combo.add( "https://scout.bsiag.com/repository/eclipse.releases.luna" );
+        combo.add( "https://scout.bsiag.com/repository/scout.jaxws22/" );
 //        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.kepler" );
 //        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.juno" );
 //        combo.add( "https://scout.bsiag.com/repository/eclipse.releases.indigo" );
@@ -114,8 +116,8 @@ public class RepositoryLocationDialog
 
 //        combo.add( "https://scout.bsiag.com/repository/orbit-S20130427215344" );
 
-        combo.add( "http://download.eclipse.org/eclipse/updates/4.5" );
-        combo.add( "http://download.eclipse.org/eclipse/updates/4.4" );
+        // combo.add( "http://download.eclipse.org/eclipse/updates/4.5" );
+        // combo.add( "http://download.eclipse.org/eclipse/updates/4.4" );
         // combo.add( "http://download.eclipse.org/eclipse/updates/4.3" );
         // combo.add( "http://download.eclipse.org/eclipse/updates/4.2" );
         // combo.add( "http://download.eclipse.org/eclipse/updates/3.8" );
