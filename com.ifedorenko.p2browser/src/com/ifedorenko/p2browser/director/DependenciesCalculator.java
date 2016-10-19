@@ -74,12 +74,13 @@ public class DependenciesCalculator
         {
             Set<Explanation> explanation = projector.getExplanation( monitor );
             System.out.println( explanation );
+			this.resolved = Collections.emptyList();
+		} else {
+			dag = dag.filter(new InstallableUnitsMatcher(resolved), false);
+			this.resolved = new ArrayList<IInstallableUnit>(resolved);
         }
 
-        dag = dag.filter( new InstallableUnitsMatcher( resolved ), false );
-
         this.dag = dag;
-        this.resolved = new ArrayList<IInstallableUnit>( resolved );
     }
 
     private IInstallableUnit createEntryPointIU( Collection<IInstallableUnit> rootIUs )

@@ -14,8 +14,13 @@ package com.ifedorenko.p2browser;
 import org.eclipse.ui.IFolderLayout;
 import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
+import org.eclipse.ui.IPlaceholderFolderLayout;
 
+import com.ifedorenko.p2browser.views.DependencyHierarchyView;
+import com.ifedorenko.p2browser.views.FeatureReferenceHierarchyView;
+import com.ifedorenko.p2browser.views.InstallableUnitView;
 import com.ifedorenko.p2browser.views.MetadataRepositoryView;
+import com.ifedorenko.p2browser.views.ReferenceHierarchyView;
 
 public class Perspective
     implements IPerspectiveFactory
@@ -27,5 +32,11 @@ public class Perspective
         String editorArea = layout.getEditorArea();
         IFolderLayout left = layout.createFolder( "left", IPageLayout.LEFT, IPageLayout.RATIO_MAX, editorArea );
         left.addView( MetadataRepositoryView.ID );
+        
+        IPlaceholderFolderLayout bottom = layout.createPlaceholderFolder( "bottom", IPageLayout.BOTTOM, 0.6f, "left" );
+		bottom.addPlaceholder(InstallableUnitView.ID + ":*");
+		bottom.addPlaceholder(DependencyHierarchyView.ID + ":*");
+		bottom.addPlaceholder(ReferenceHierarchyView.ID + ":*");
+		bottom.addPlaceholder(FeatureReferenceHierarchyView.ID + ":*");
     }
 }
